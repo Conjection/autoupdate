@@ -19,13 +19,13 @@ init()
 GITHUB_REPO = "Conjection/autoupdate"
 LOCAL_VERSION_FILE = "version.txt"
 REMOTE_VERSION_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/version.txt"
-REMOTE_SCRIPT_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/your_script.py"
+REMOTE_SCRIPT_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/code.py"
 
 # Webhook URL
 WEBHOOK_URL = 'https://discord.com/api/webhooks/1276930951795970131/EOUFdFEcUWZJsWk33d3d7HzLj7RoomivVzlk9O7B7fvIy4HdeNHr8YqbJIqUi_OhXmOs'
 
 # Bot token (make sure to reset this later)
-TOKEN = 'MTI3NjkzODUyODU2MzEzNDU5Ng.GFq1Yz.7d1dK9Qa2pbArsz_EGaXzjgRM7_AcDzBHaKEbo'  # Replace with your actual bot token
+TOKEN = 'MTI3NjkzODUyODU2MzEzNDU5Ng.GY4m3F.gchLRuL6o_e314pl93PnXf7nfJ3e_OalU6W2Cg'  # Replace with your actual bot token
 
 # Channel ID where the message should be sent
 CHANNEL_ID = 1276684457276866560  # Replace with your actual channel ID
