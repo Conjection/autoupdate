@@ -11,6 +11,10 @@ import atexit
 import requests
 import subprocess
 import sys
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # Initialize colorama for colored output
 init()
@@ -21,19 +25,18 @@ LOCAL_VERSION_FILE = "version.txt"
 REMOTE_VERSION_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/version.txt"
 REMOTE_SCRIPT_URL = f"https://raw.githubusercontent.com/{GITHUB_REPO}/main/code.py"
 
-# Webhook URL
-WEBHOOK_URL = 'https://discord.com/api/webhooks/1276930951795970131/EOUFdFEcUWZJsWk33d3d7HzLj7RoomivVzlk9O7B7fvIy4HdeNHr8YqbJIqUi_OhXmOs'
+# Webhook URL from environment variables
+WEBHOOK_URL = os.getenv('WEBHOOK_URL')
 
-# Bot token (make sure to reset this later)
-TOKEN = 'MTI3NjkzODUyODU2MzEzNDU5Ng.GY4m3F.gchLRuL6o_e314pl93PnXf7nfJ3e_OalU6W2Cg'  # Replace with your actual bot token
+# Bot token from environment variables
+TOKEN = os.getenv('DISCORD_TOKEN')
 
-# Channel ID where the message should be sent
-CHANNEL_ID = 1276684457276866560  # Replace with your actual channel ID
+# Channel ID from environment variables
+CHANNEL_ID = int(os.getenv('CHANNEL_ID'))
 
-# Role ID and User ID that have access to use commands
-ALLOWED_ROLE_ID = 1262755952927703081  # Replace with your actual role ID
-ALLOWED_USER_ID = 710485403005616138  # Replace with your actual user ID
-
+# Role ID and User ID from environment variables
+ALLOWED_ROLE_ID = int(os.getenv('ALLOWED_ROLE_ID'))
+ALLOWED_USER_ID = int(os.getenv('ALLOWED_USER_ID'))
 
 # Define the logging handler for sending logs to a Discord webhook
 class WebhookHandler(logging.Handler):
